@@ -35,7 +35,7 @@ def commons(filename=None, ext=None):
 def admin(subpath='/'):
     """ Admin panel probing handler """
     origin = request.remote_addr
-    LOGGER.info('%s probed for the admin panel with path: %s', origin, subpath)
+    LOGGER.info('%s probed for the admin panel with path: %s and url %s', origin, subpath, request)
     
     # Plugins hook
     for p in pm.hook('plugins'):
